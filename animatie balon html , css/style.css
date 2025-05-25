@@ -1,0 +1,53 @@
+body {
+    background: linear-gradient(to bottom, #87CEEB, #1E90FF); 
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; 
+}
+
+.balon {
+    width: 180px;
+    height: 220px;
+    background: radial-gradient(circle, #ff6969, #ff5347); 
+    border-radius: 50%;
+    position: absolute;
+    top: 30vh;
+    animation: move 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    animation-delay: 1s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.fir-balon {
+    width: 6px; 
+    height: 240px;
+    background: linear-gradient(to top, #696969, #A9A9A9); 
+    position: absolute;
+    top: 52vh;
+    left: 49.6%;
+    z-index: -2;
+    border-radius: 20px;
+    animation: move 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    animation-delay: 1s;
+}
+
+@keyframes move {
+    0% {
+        transform: translateX(0) translateY(0);
+    }
+    25% {
+        transform: translateY(-30px) translateX(-50px) rotate(-5deg);
+    }
+    50% {
+        transform: translateY(-70px) translateX(80px) rotate(3deg);
+    }
+    75% {
+        transform: translateY(-120px) translateX(-100px) rotate(-2deg);
+    }
+    100% {
+        transform: translateY(-100vh) translateX(150px) rotate(0deg);
+    }
+}
